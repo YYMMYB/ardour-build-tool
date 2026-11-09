@@ -275,7 +275,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           set -euo pipefail
-          git clone --recursive --branch "${{ steps.resolve.outputs.version }}" --depth 1 \
+          git clone --recursive --branch "${{ steps.resolve.outputs.version }}" \
             "$ARDOUR_REPO" ardour
 
       - name: 配置与编译 (Linux)
